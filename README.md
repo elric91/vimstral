@@ -1,5 +1,6 @@
 # vimstral
 A really simple Neovim plugin to query Mistral FIM and completion models
+/!\ EARLY STAGE PLUGIN DEVELOPMENT, USE AT YOUR OWN RISKS 
 
 ## install
 since neovim 0.11 :
