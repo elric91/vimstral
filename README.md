@@ -41,7 +41,8 @@ require 'vimstral.setup({
 ```
 
 ## usage
-<video height="300" src="https://github.com/elric91/vimstral/blob/main/media/vimstral_exemple_1.mp4"></video>
+https://github.com/user-attachments/assets/8314f9c7-e604-4cb4-9c7c-35caf00e0006
+
 
 (defaults keymaps)
 \<Control-j\>r : query the model. Context will include already existing context + selected lines (or current line if no line is selected)
