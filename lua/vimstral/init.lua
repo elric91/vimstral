@@ -18,11 +18,11 @@ M.config = {
   },
 
   keymaps = {
-    user_context        = '<C-j>', -- toggle user context on line
-    fim                 = '<leader>jf', -- fim
-    query               = '<leader>jr', -- ask visually selected question ('R'equest), append response
-    assistant_context   = '<leader>ja', -- force the selected lines to be considered as responses
-    clean_context       = '<leader>jc', -- force the context to be removes
+    user_context        = '<C-j>j', -- toggle user context on line
+    fim                 = '<C-j>f', -- fill in the middle
+    query               = '<C-j>r', -- ask visually selected question ('R'equest), append response
+    assistant_context   = '<C-j>a', -- force the selected lines to be considered as responses
+    clean_context       = '<C-j>c', -- force the context to be removed
   }
 }
 
@@ -207,11 +207,11 @@ function M.setup(opts)
   sm.setup('vimstral', M.config.signs)
 
   local keymaps = M.config.keymaps
-  vim.keymap.set({'v', 'n'}, keymaps.user_context, sm.toggle_usercontext)
-  vim.keymap.set({'v', 'n'}, keymaps.assistant_context, sm.force_assistantcontext)
-  vim.keymap.set({'v', 'n'}, keymaps.clean_context, sm.clean_context)
-  vim.keymap.set({'n', 'i', 'v'}, keymaps.query, M.query)
-  vim.keymap.set({'n', 'i', 'v'}, keymaps.fim, M.fill_in_the_middle)
+  vim.keymap.set({'n', 'v'}, keymaps.user_context, sm.toggle_usercontext)
+  vim.keymap.set({'n', 'v'}, keymaps.assistant_context, sm.force_assistantcontext)
+  vim.keymap.set({'n', 'v'}, keymaps.clean_context, sm.clean_context)
+  vim.keymap.set({'n', 'v', 'i'}, keymaps.query, M.query)
+  vim.keymap.set({'n', 'v', 'i'}, keymaps.fim, M.fill_in_the_middle)
 
   logfile = '/tmp/vimstral.log' -- empty string to avoid debugging logs
 end
